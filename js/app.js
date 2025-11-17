@@ -148,7 +148,7 @@ function validateStep(stepNumber, message = true) {
         regex:/\S+/
     },{
         input: yearsOfExperience,
-        regex: /^([0-9]|[1-9][0-9]|50)$/
+        regex: /^(?:[0-9]|[1-4][0-9]|50)$/
     }];
 
     validateStep2.forEach(ele => {
