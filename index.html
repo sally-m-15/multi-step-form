@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>multi-step-form</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="container">
+            <h1>Create Your Profile</h1>
+            <nav>
+                <ul class="menu">
+                    <li class="active">
+                        <span class="">1</span>
+                        <h4>Personal Information</h4>
+                    </li>
+                    <li>
+                        <span>2</span>
+                        <h4>professional background</h4>
+                    </li>
+                    <li>
+                        <span>3</span>
+                        <h4>skills & preferences</h4>
+                    </li>
+                </ul>
+            </nav>
+            <div class="page-toggle">
+                <form>
+                    <section class="form-group" id="step1">
+                        <div>
+                            <label for="full-name">full name :</label>
+                            <input class="form-control" type="text" id="full-name" name="full-name" required>
+                            <p class="error-msg display-none">Full name is required</p>
+                        </div>
+                        <div>
+                            <label for="user-name">user name :</label>
+                            <input class="form-control" type="text" id="user-name" name="user-name" required>
+                            <p class="error-msg display-none">Username must be at least 3 characters</p>
+                        </div>
+                        <div>
+                            <label for="email">email address :</label>
+                            <input class="form-control" type="email" id="email" name="email" required>
+                            <p class="error-msg display-none">Enter a valid email</p>
+                        </div>
+                    </section>
+                    <section class="form-group opacity-step" id="step2">
+                        <div>
+                            <label for="experience-Level">Experience Level :</label>
+                            <select class="form-control" name="experience-Level" id="experience-Level">
+                                <option class="display-none" value=""></option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                            <p class="error-msg display-none">Please select your experience level</p>
+                        </div>
+                        <div>
+                            <label for="current-role">Current Role :</label>
+                            <input type="text" class="form-control" id="current-role" name="current-role">
+                            <p class="error-msg display-none">Please enter your current role</p>
+                        </div>
+                        <div>
+                            <label for="Experience">Years of Experience :</label>
+                            <input type="number" class="form-control" id="Experience" name="years">
+                            <p class="error-msg display-none">Please enter your years of experience</p>
+                        </div>
+                    </section>
+                    <section class="form-group opacity-step" id="step3">
+                        <h4 class="text-center">Skills & Preferences</h4>
+                        <div>
+                            <div class="checkbox-group">
+                            <label for="JavaScript">
+                            <input  type="checkbox" name="lang" id="JavaScript" value="JavaScript">
+                            JavaScript
+                            </label>
+                            <label for="CSS">
+                                <input type="checkbox" name="lang" id="CSS" value="CSS">
+                                css
+                            </label>
+                            <label for="HTML">
+                                <input type="checkbox" name="lang" id="HTML" value="HTML">
+                                html
+                            </label>
+                            <label for="React">
+                                <input type="checkbox" name="lang" id="React" value="React">
+                                React
+                            </label>
+                            <label for="Node.js">
+                                <input type="checkbox" name="lang" id="Node.js" value="Node.js">
+                                Node.js
+                            </label>
+                            <label for="Python">
+                                <input type="checkbox" name="lang" id="Python" value="Python">
+                                Python
+                            </label>
+                        </div>
+                        <p class="error-msg error-checkbox display-none">Please select at least one skill</p>
+                        </div>
+                        
+                        <h4 class="text-center">Availability</h4>
+                        <div>
+                            <div class="radio-group">
+                            <label for="Full-time">
+                                <input type="radio" id="Full-time" name="radio">
+                                Full-time
+                            </label>
+                            <label for="Part-time">
+                                <input type="radio" id="Part-time" name="radio">
+                                Part-time
+                            </label>
+                            <label for="Freelance">
+                                <input type="radio" id="Freelance" name="radio">
+                                Freelance
+                            </label>
+                        </div>
+                        <p class="error-msg display-none error-radio">Please select your availability</p>
+                        </div>
+                        <div class="salary-input">
+                            <label for="salary">salary :</label>
+                            <input type="number" id="salary">
+                        </div>
+                        
+                    </section> 
+                    <div class="btn">
+                        <button class="display-none" id="previous">Previous</button>
+                        <button type="submit" id="button">Next</button>
+                    </div>
+                </form> 
+            </div> 
+        </div> 
+    </div>
+<script src="js/app.js"></script>
+</body>
+</html>
